@@ -488,7 +488,6 @@
 											<div class="bio-graph-heading">Hello {{name}}, below is
 												your personal details</div>
 											<div class="panel-body bio-graph-info">
-												<h1>Bio Graph</h1>
 												<div class="row">
 													<div class="bio-row">
 														<p>
