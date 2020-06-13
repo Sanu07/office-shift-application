@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 public class MonthlyShiftModel {
 	@Id
@@ -14,6 +16,7 @@ public class MonthlyShiftModel {
 	private String name;
 	private String month;
 	private String year;
+	@Type(type="text")
 	private String individualShiftModel;
 	public long getShiftId() {
 	 return shiftId;
