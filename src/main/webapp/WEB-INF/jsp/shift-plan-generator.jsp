@@ -307,7 +307,7 @@
 		<!--main content start-->
 		<section id="main-content">
 			<section class="wrapper">
-				<div class="row" id="not-movable">
+				<div class="row">
 					<div class="col-lg-12">
 						<h3 class="page-header">
 							<i class="fa fa fa-bars"></i>Shift Plan Generator
@@ -323,7 +323,7 @@
 
 				<div class="row">
 					<div class="col-lg-12">
-						<section class="panel">
+						<div class="panel">
 							<header class="panel-heading">Generate Shift Plan</header>
 							<div class="panel-body">
 								<form class="form-horizontal" id="shift-plan-form">
@@ -339,7 +339,7 @@
 									</div>
 								</form>
 							</div>
-						</section>
+						</div>
 					</div>
 
 					<!-- Modal Body to return success or failure status -->

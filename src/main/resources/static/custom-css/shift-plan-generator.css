@@ -31,10 +31,15 @@ background: linear-gradient(45deg, #f7f2f2 0%,#fcbfbf 60%,#ff5c5c 100%); /* W3C,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f2f2', endColorstr='#ff5c5c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-#not-movable {
-z-index: -100;
-}
-
 .selected-shift [value="A"] {
 background-color: red;
+}
+
+.col-lg-12, .col-sm-5, .col-sm-2, .breadcrumb,
+.panel, .panel .panel-heading, .breadcrumb li {
+	position: inherit;
+}
+
+.page-header, .page-header i {
+	opacity: inherit;
 }
