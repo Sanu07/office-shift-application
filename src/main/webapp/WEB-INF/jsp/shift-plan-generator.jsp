@@ -368,8 +368,7 @@
 					<!-- Modal body ends here -->
 
 					<!--  Shift Plan Table Generator -->
-					<div class="container" id="shift-plan-table"
-						style="margin-left: 100px">
+					<div class="container" id="shift-plan-table">
 						<h3>{{month}}</h3>
 						<form id="shift-plan-generator-form">
 							<table class="table table-bordered"
