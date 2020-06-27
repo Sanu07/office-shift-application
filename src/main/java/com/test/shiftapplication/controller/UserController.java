@@ -7,7 +7,9 @@ import java.util.Date;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,7 +41,13 @@ public class UserController {
 		userModel.setPhone(phone);
 		userModel.setPassword(password);
 		userModel.setCognizantId(cognizantId);
-		UserModel getUsers = userService.saveUser(userModel);
+		try {
+			userService.saveUser(userModel);
+		} catch (DataIntegrityViolationException e) {
+			return new ModelAndView("register-login-form", "registerErrorMessage", "Could not be registered!! Email Already exists");
+		}catch (Exception e) {
+			return new ModelAndView("register-login-form", "registerErrorMessage", "Could not be registered!! Some problem in Database");
+		}
 		return new ModelAndView("register-login-form");
 	}
 

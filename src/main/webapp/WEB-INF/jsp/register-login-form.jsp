@@ -99,7 +99,7 @@
 									<button type="submit" class="btn"
 										ng-click="validateLoginDetails(this)">Sign in!</button>
 								</form>
-								<span style="font-family: fantasy; color: #ff5233">
+								<span style="font-family: none; color: #ff5233">
 									${errorMessage}</span>
 							</div>
 						</div>
@@ -173,6 +173,8 @@
 									</div>
 									<button type="submit" class="btn">Sign me up!</button>
 								</form>
+								<span style="font-family: none; color: #ff5233">
+									${registerErrorMessage}</span>
 							</div>
 						</div>
 

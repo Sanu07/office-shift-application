@@ -336,7 +336,7 @@ window.onunload = function() {
 				</div>
 
 				<div class="row">
-					<div ng-if="countAfternoonShift >= 0" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div ng-cloak ng-if="countAfternoonShift >= 0" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="info-box blue-bg">
 							<i class="fa fa-users"></i>
 							<div class="title">{{shiftDetailsMonth}}
@@ -350,7 +350,7 @@ window.onunload = function() {
 					</div>
 					<!--/.col-->
 
-					<div ng-if="jirasResponse >= 0" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div ng-cloak ng-if="jirasResponse >= 0" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="info-box brown-bg">
 							<i class="fa fa-pencil-square-o"></i>
 							<div class="title">Last month</div>
@@ -362,7 +362,7 @@ window.onunload = function() {
 					</div>
 					<!--/.col-->
 
-					<div ng-if="wsrResponse" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div ng-cloak ng-if="wsrResponse" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="info-box dark-bg">
 							<i class="fa fa-file-word-o"></i>
 							<div class="title">WSR for {{nextThursday}}</div>
@@ -373,7 +373,7 @@ window.onunload = function() {
 					</div>
 					<!--/.col-->
 
-					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+					<div ng-cloak class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="info-box green-bg">
 							<i class="fa fa-sign-in"></i>
 							<div class="title">Last Login</div>

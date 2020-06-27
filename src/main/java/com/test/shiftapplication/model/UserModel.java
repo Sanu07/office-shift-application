@@ -6,9 +6,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "USER_DETAILS")
+@Table(name = "USER_DETAILS", uniqueConstraints = {
+	       @UniqueConstraint(columnNames = {"EMAIL"}) })
 public class UserModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +19,8 @@ public class UserModel {
 	private long userId;
 	private String name;
 	private String cognizantId;
+	@NotNull
+	@Column(name = "EMAIL")
 	private String email;
 	private String phone;
 	private String password;
