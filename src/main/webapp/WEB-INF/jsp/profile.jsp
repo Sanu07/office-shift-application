@@ -413,7 +413,7 @@
 													<div class="container">
 														<h2>Daily News Update</h2>
 														
-														<div ng-if="response.data" id="myCarousel" class="carousel slide"
+														<div id="myCarousel" class="carousel slide"
 															data-ride="carousel">
 															<!-- Indicators -->
 															<ol class="carousel-indicators">
