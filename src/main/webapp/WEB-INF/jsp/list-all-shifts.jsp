@@ -88,7 +88,7 @@ if it's not present, don't show loader */
 			</div>
 
 			<!--logo start-->
-			<a href="index.html" class="logo">Shift <span class="lite">Application</span></a>
+			<a href="#" class="logo">Shift <span class="lite">Application</span></a>
 			<!--logo end-->
 
 			<div class="top-nav notification-row">
@@ -427,7 +427,7 @@ if it's not present, don't show loader */
 								ng-click="saveEditedShiftPlan(this)" class="btn btn-default">Save</button>
 							<span style="margin-left: 20px; font-size: large;"><a
 								class="fa fa-download"
-								href="/shifts/generateExcel/{{month}}/{{year}}">Download As
+								href="/shifts/generateExcel/{{month}}/{{year}}">&nbsp;&nbsp;Download As
 									Excel</a></span>
 						</form>
 					</div>
@@ -446,9 +446,9 @@ if it's not present, don't show loader */
                     Licensing information: https://bootstrapmade.com/license/
                     Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
                 -->
-				<a
+				<!-- <a
 					href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business
-					Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+					Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
 			</div>
 		</div>
 	</section>

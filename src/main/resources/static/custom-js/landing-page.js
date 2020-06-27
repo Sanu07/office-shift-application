@@ -107,7 +107,7 @@ var app = angular
 					})
 							.then(
 									function(response) {
-										console.log(response);
+										// console.log(response);
 										var individualShiftArray = new Array();
 										var morningCount = 0, weeklyOffCount = 0, nightCount = 0, afternoonCount = 0;
 										for (var i = 0; i < response.data.length; i++) {

@@ -30,14 +30,12 @@
 .no-js #loader {
 	display: none;
 }
-
 .js #loader {
 	display: block;
 	position: absolute;
 	left: 100px;
 	top: 0;
 }
-
 .se-pre-con {
 	position: fixed;
 	left: 0px;
@@ -46,6 +44,13 @@
 	height: 100%;
 	/* z-index: 9999; */
 	background: url(img/Preloader_2.gif) center no-repeat #fff;
+}
+.carousel-caption {
+	background-color: black;
+    opacity: 0.7;
+}
+.carousel-indicators li {
+	border: 2px solid;
 }
 </style>
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
@@ -68,7 +73,7 @@
 			</div>
 
 			<!--logo start-->
-			<a href="index.html" class="logo">Shift <span class="lite">Application</span></a>
+			<a href="#" class="logo">Shift <span class="lite">Application</span></a>
 			<!--logo end-->
 
 			<div class="top-nav notification-row">
@@ -333,7 +338,7 @@
 								<div class="col-lg-2 col-sm-2">
 									<h4>{{name}}</h4>
 									<div class="follow-ava">
-										<img src="" alt="">
+										<img src="https://i.pravatar.cc/300" alt="">
 									</div>
 									<h6>User</h6>
 								</div>
@@ -351,26 +356,18 @@
 								</div>
 								<div class="col-lg-2 col-sm-6 follow-info weather-category">
 									<ul>
-										<li class="active"><i class="fa fa-comments fa-2x"> </i><br>
-
-											Contrary to popular belief, Lorem Ipsum is not simply</li>
-
+										<li class="active"><i class="fa fa-comments fa-2x"> </i><br></li>
 									</ul>
 								</div>
 								<div class="col-lg-2 col-sm-6 follow-info weather-category">
 									<ul>
-										<li class="active"><i class="fa fa-bell fa-2x"> </i><br>
-
-											Contrary to popular belief, Lorem Ipsum is not simply</li>
-
+										<li class="active"><i class="fa fa-bell fa-2x"> </i><br></li>
 									</ul>
 								</div>
 								<div class="col-lg-2 col-sm-6 follow-info weather-category">
 									<ul>
 										<li class="active"><i class="fa fa-tachometer fa-2x">
-										</i><br> Contrary to popular belief, Lorem Ipsum is not
-											simply</li>
-
+										</i><br></li>
 									</ul>
 								</div>
 							</div>
@@ -415,7 +412,8 @@
 
 													<div class="container">
 														<h2>Daily News Update</h2>
-														<div id="myCarousel" class="carousel slide"
+														
+														<div ng-if="response.data" id="myCarousel" class="carousel slide"
 															data-ride="carousel">
 															<!-- Indicators -->
 															<ol class="carousel-indicators">
@@ -665,9 +663,9 @@
                     Licensing information: https://bootstrapmade.com/license/
                     Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
                 -->
-				<a
+				<!-- <a
 					href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business
-					Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+					Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
 			</div>
 		</div>
 	</section>

@@ -62,7 +62,7 @@
 			</div>
 
 			<!--logo start-->
-			<a href="index.html" class="logo">Shift <span class="lite">Application</span></a>
+			<a href="#" class="logo">Shift <span class="lite">Application</span></a>
 			<!--logo end-->
 
 			<div class="top-nav notification-row">
@@ -483,9 +483,9 @@
                 Licensing information: https://bootstrapmade.com/license/
                 Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
             -->
-				<a
+				<!-- <a
 					href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business
-					Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+					Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
 			</div>
 		</div>
 	</section>
