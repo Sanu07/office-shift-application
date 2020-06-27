@@ -30,7 +30,7 @@ public class UserController {
 	UserService userService;
 
 	@RequestMapping(value = "/saveUser", method = RequestMethod.POST)
-	public @ResponseBody Object saveUser(@RequestParam("form-first-name") String name,
+	public ModelAndView saveUser(@RequestParam("form-first-name") String name,
 			@RequestParam("form-cognizant-id") String cognizantId, @RequestParam("form-email") String email,
 			@RequestParam("phone") String phone, @RequestParam("password") String password) {
 		UserModel userModel = new UserModel();
@@ -40,7 +40,7 @@ public class UserController {
 		userModel.setPassword(password);
 		userModel.setCognizantId(cognizantId);
 		UserModel getUsers = userService.saveUser(userModel);
-		return getUsers;
+		return new ModelAndView("register-login-form");
 	}
 
 	@RequestMapping(value = "/loginUser", method = RequestMethod.POST)

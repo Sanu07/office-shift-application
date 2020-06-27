@@ -48,6 +48,9 @@
 #coming-soon-div {
 	background: rgba(200, 54, 54, 0.5);
 }
+.info-box i {
+	margin-right: 0px;
+}
 </style>
 <script type="text/javascript">
 function preventBack() {
@@ -335,17 +338,13 @@ window.onunload = function() {
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="info-box blue-bg">
-							<i class="fa fa-cloud-download"></i>
-							<div class="title">Shift for {{shiftDetailsMonth}}
+							<i class="fa fa-users"></i>
+							<div class="title">{{shiftDetailsMonth}}
 								{{shiftDetailsYear}}</div>
-							<div class="">Morning | {{countMorningShift == 0 ? 'N/A' :
-								countMorningShift}}</div>
-							<div class="">Afternoon | {{countAfternoonShift == 0 ?
-								'N/A' : countAfternoonShift}}</div>
-							<div class="">Night | {{countNightShift == 0 ? 'N/A' :
-								countNightShift}}</div>
-							<div class="">WeeklyOff | {{countWeeklyOff == 0 ? 'N/A' :
-								countWeeklyOff}}</div>
+							<div class="">Morning | {{countMorningShift || 0}}</div>
+							<div class="">Afternoon | {{countAfternoonShift || 0}}</div>
+							<div class="">Night | {{countNightShif || 0}}</div>
+							<div class="">WeeklyOff | {{countWeeklyOff|| 0}}</div>
 						</div>
 						<!--/.info-box-->
 					</div>
@@ -353,15 +352,11 @@ window.onunload = function() {
 
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="info-box brown-bg">
-							<i class="fa fa-shopping-cart"></i>
-							<div class="title">Last month updates</div>
-							<div>{{jirasResponse.length > 0 ? jirasResponse.length :
-								"Recently no" }} Jiras are updated</div>
-							<div>{{incidentsResponse.length > 0 ?
-								incidentsResponse.length : "Recently no" }} Incidents are
-								updated</div>
-							<div>{{leavesResponse.length > 0 ? leavesResponse.length :
-								"Recently no" }} Leaves are updated</div>
+							<i class="fa fa-pencil-square-o"></i>
+							<div class="title">Last month</div>
+							<div>Jiras | {{jirasResponse.length}}</div>
+							<div>Incidents | {{incidentsResponse.length}}</div>
+							<div>Leaves | {{leavesResponse.length}}</div>
 						</div>
 						<!--/.info-box-->
 					</div>
@@ -369,7 +364,7 @@ window.onunload = function() {
 
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="info-box dark-bg">
-							<i class="fa fa-thumbs-o-up"></i>
+							<i class="fa fa-file-word-o"></i>
 							<div class="title">WSR for {{nextThursday}}</div>
 							<div class="">{{wsrResponse.length > 0 ? 'has been updated'
 								: 'has not been updated' }}</div>
@@ -380,7 +375,7 @@ window.onunload = function() {
 
 					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 						<div class="info-box green-bg">
-							<i class="fa fa-cubes"></i>
+							<i class="fa fa-sign-in"></i>
 							<div class="title">Last Login</div>
 							<div class="">{{lastLoginTime == null ? 'This is your first
 								time login' : lastLoginTime}}</div>
@@ -461,9 +456,9 @@ window.onunload = function() {
 
 
 
-				<div class="row">
+				<!--<div class="row">
 
-					<div class="col-lg-9 col-md-12">
+					 <div class="col-lg-9 col-md-12">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h2>
@@ -477,7 +472,7 @@ window.onunload = function() {
 										href="" class="btn-close"><i class="fa fa-times"></i></a>
 								</div>
 							</div>
-							<div class="panel-body">
+							 <div class="panel-body">
 								<div class="jumbotron">
 									<h2>{{weatherData.location.city}}{{weatherData.location.region}},{{weatherData.location.country}}</h2>
 									<p>Data as of {{weatherData.item.condition.date}}</p>
@@ -531,9 +526,9 @@ window.onunload = function() {
 
 						</div>
 
-					</div>
+					</div> -->
 					<!--/col-->
-					<div class="col-md-3">
+					<!-- <div class="col-md-3">
 
 						<div class="social-box facebook">
 							<i class="fa fa-facebook"></i>
@@ -542,7 +537,7 @@ window.onunload = function() {
 								<li><strong>359</strong> <span>feeds</span></li>
 							</ul>
 						</div>
-						<!--/social-box-->
+						/social-box
 					</div>
 					<div class="col-md-3">
 
@@ -553,10 +548,10 @@ window.onunload = function() {
 								<li><strong>256</strong> <span>circles</span></li>
 							</ul>
 						</div>
-						<!--/social-box-->
+						/social-box
 
 					</div>
-					<!--/col-->
+					/col
 					<div class="col-md-3">
 
 						<div class="social-box twitter">
@@ -566,12 +561,10 @@ window.onunload = function() {
 								<li><strong>2562</strong> <span>tweets</span></li>
 							</ul>
 						</div>
-						<!--/social-box-->
+						/social-box
 
-					</div>
-					<!--/col-->
-
-				</div>
+					</div> 
+				</div> -->
 
 
 
@@ -804,7 +797,7 @@ window.onunload = function() {
                   </div>
               </div><br><br> -->
 
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-md-6 portlets">
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -821,9 +814,9 @@ window.onunload = function() {
 							<br>
 							<br>
 							<div class="panel-body">
-								<!-- Widget content -->
+								Widget content
 
-								<!-- Below line produces calendar. I am using FullCalendar plugin. -->
+								Below line produces calendar. I am using FullCalendar plugin.
 								<div id="calendar"></div>
 
 							</div>
@@ -845,9 +838,9 @@ window.onunload = function() {
 								<div class="padd">
 
 									<div class="form quick-post">
-										<!-- Edit profile form (not working)-->
+										Edit profile form (not working)
 										<form class="form-horizontal">
-											<!-- Title -->
+											Title
 											<div class="form-group">
 												<label class="control-label col-lg-2" for="title">Title</label>
 												<div class="col-lg-10">
@@ -855,7 +848,7 @@ window.onunload = function() {
 														disabled="disabled">
 												</div>
 											</div>
-											<!-- Content -->
+											Content
 											<div class="form-group">
 												<label class="control-label col-lg-2" for="content">Content</label>
 												<div class="col-lg-10">
@@ -863,7 +856,7 @@ window.onunload = function() {
 														disabled="disabled"></textarea>
 												</div>
 											</div>
-											<!-- Cateogry -->
+											Cateogry
 											<div class="form-group">
 												<label class="control-label col-lg-2">Category</label>
 												<div class="col-lg-10">
@@ -876,7 +869,7 @@ window.onunload = function() {
 													</select>
 												</div>
 											</div>
-											<!-- Tags -->
+											Tags
 											<div class="form-group">
 												<label class="control-label col-lg-2" for="tags">Tags</label>
 												<div class="col-lg-10">
@@ -885,9 +878,9 @@ window.onunload = function() {
 												</div>
 											</div>
 
-											<!-- Buttons -->
+											Buttons
 											<div class="form-group">
-												<!-- Buttons -->
+												Buttons
 												<div class="col-lg-offset-2 col-lg-9">
 													<button type="submit" class="btn btn-primary"
 														disabled="disabled">Publish</button>
@@ -901,14 +894,14 @@ window.onunload = function() {
 									</div>
 								</div>
 								<div class="widget-foot">
-									<!-- Footer goes here -->
+									Footer goes here
 								</div>
 							</div>
 						</div>
 
 					</div>
 
-				</div>
+				</div> -->
 				<!-- project team & activity end -->
 
 			</section>
@@ -920,9 +913,9 @@ window.onunload = function() {
                     Licensing information: https://bootstrapmade.com/license/
                     Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
                 -->
-					<a
+					<!-- <a
 						href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business
-						Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+						Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
 				</div>
 			</div>
 		</section>
@@ -1127,6 +1120,6 @@ var curLongitude;
   }
  </script>
 	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDyo5j1o1y-deISZoPGK4ltDTwOIdxwt8&callback=initMap"></script>
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIViJw6I2CW86FLXbZGzQpg29MmUH-LXw&callback=initMap"></script>
 </body>
 </html>

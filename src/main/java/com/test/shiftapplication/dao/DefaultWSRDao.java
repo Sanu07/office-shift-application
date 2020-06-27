@@ -1,5 +1,6 @@
 package com.test.shiftapplication.dao;
 
+import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 

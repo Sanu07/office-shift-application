@@ -221,7 +221,7 @@ var app = angular
 					/*
 					 * weather application
 					 */
-					if (navigator.geolocation) {
+					/*if (navigator.geolocation) {
 						navigator.geolocation.getCurrentPosition(
 								successFunction, errorFunction);
 					}
@@ -247,32 +247,14 @@ var app = angular
 													for (var i = 0; i < results[0].address_components.length; i++) {
 														for (var b = 0; b < results[0].address_components[i].types.length; b++) {
 
-															// there are
-															// different types
-															// that might hold a
-															// city
-															// admin_area_lvl_1
-															// usually does in
-															// come cases
-															// looking for
-															// sublocality type
-															// will be more
-															// appropriate
 															if (results[0].address_components[i].types[b] == "locality"
 																	|| results[0].address_components[i].types[b] == "administrative_area_level_2") {
-																// this is the
-																// object you
-																// are looking
-																// for
 																city = results[0].address_components[i];
 																cityName = city.long_name;
 																break;
 															}
 														}
 													}
-													// city data
-													// alert(city.short_name + "
-													// " + city.long_name)
 													console.log(cityName);
 													$http(
 															{
@@ -308,7 +290,7 @@ var app = angular
 					}
 					function errorFunction() {
 						alert("Geocoder failed");
-					}
+					}*/
 				});
 getMonthName = function(v) {
 	var n = [ "January", "February", "March", "April", "May", "June", "July",
