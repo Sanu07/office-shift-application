@@ -382,9 +382,9 @@
          </aside>
          <!--sidebar end-->
          <!--main content start-->
-         <section id="main-content">
-            <div class="loader" ng-if="loading"></div>
-            <section class="wrapper" ng-if="!loading">
+         <div class="loader" ng-if="loading"></div>
+         <section id="main-content" ng-if="!loading">
+            <section class="wrapper">
                <!--overview start-->
                <div class="row">
                   <div class="col-lg-12">
@@ -412,7 +412,7 @@
                      <!--/.info-box-->
                   </div>
                   <!--/.col-->
-                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" ng-if="jirasResponse.length >= 0">
+                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                      <div class="info-box brown-bg">
                         <i class="fa fa-pencil-square-o"></i>
                         <div class="title">Past 30 days</div>
@@ -423,7 +423,7 @@
                      <!--/.info-box-->
                   </div>
                   <!--/.col-->
-                  <div ng-if="wsrResponse.length >= 0" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                      <div class="info-box dark-bg">
                         <i class="fa fa-file-word-o"></i>
                         <div class="title">WSR for {{nextThursday}}</div>
