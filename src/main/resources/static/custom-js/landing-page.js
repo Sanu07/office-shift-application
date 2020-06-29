@@ -27,7 +27,7 @@ var app = angular
                          * start of Last Month shift details
                          */
 
-                        $http({
+                        var qShiftsReq = $http({
                                 method: "GET",
                                 url: "/shifts/month/" +
                                     month +
@@ -66,6 +66,7 @@ var app = angular
                                         $scope.countNightShift = countNightShift;
                                         $scope.countAfternoonShift = countAfternoonShift;
                                     }
+                                    promises.push(qShiftsReq);
                                 },
                                 function(response) {
                                     console
@@ -79,7 +80,7 @@ var app = angular
                         /*
                          * Start of Last Logged In
                          */
-                        $http({
+                        var qLastLogin = $http({
                                 url: "lastLoggedIn/" +
                                     $scope.cognizantId,
                                 method: "GET"
@@ -88,6 +89,7 @@ var app = angular
                                 function(response) {
                                     // console.log(response);
                                     $scope.lastLoggedIn = response.data.lastLoginTime;
+                                    promises.push(qLastLogin);
                                 },
                                 function(response) {
                                     console.log("error :: landing-page.js")
