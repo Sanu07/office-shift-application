@@ -83,7 +83,7 @@
          };
       </script>
    </head>
-   <body ng-app="shiftApp" ng-controller="landing-page-controller">
+   <body ng-app="shiftApp" ng-controller="landing-page-controller" ng-cloak>
       <!-- container section start -->
       <section id="container" class="">
          <header class="header dark-bg">
@@ -103,7 +103,7 @@
                   <li id="task_notificatoin_bar" class="dropdown">
                      <a
                         data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
-                        class="icon-task-l"></i> <span class="badge bg-important" ng-cloak>shift
+                        class="icon-task-l"></i> <span class="badge bg-important" >shift
                      {{totalCount}}</span>
                      </a>
                      <ul class="dropdown-menu extended tasks-bar">
@@ -189,12 +189,12 @@
                   <li id="mail_notificatoin_bar" class="dropdown">
                      <a
                         data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
-                        class="icon-envelope-l"></i> <span class="badge bg-important" ng-cloak>{{incidentsResponse.length+jirasResponse.length+leavesResponse.length}}</span>
+                        class="icon-envelope-l"></i> <span class="badge bg-important" >{{incidentsResponse.length+jirasResponse.length+leavesResponse.length}}</span>
                      </a>
                      <ul class="dropdown-menu extended inbox">
                         <div class="notify-arrow notify-arrow-blue"></div>
                         <li>
-                           <p class="blue" ng-cloak>You have
+                           <p class="blue" >You have
                               {{incidentsResponse.length+jirasResponse.length+leavesResponse.length}}
                               new messages
                            </p>
@@ -202,7 +202,7 @@
                         <li><a href="/list-all-jiras"> <span class="photo"><img
                            alt="avatar" src="./img/avatar-mini.jpg"></span> <span
                            class="subject"> <span class="from">Jiras</span> <span
-                           class="time" ng-cloak>{{jirasResponse.length == 0 ? 'N/A' :
+                           class="time" >{{jirasResponse.length == 0 ? 'N/A' :
                            jirasResponse.length}}</span>
                            </span> <span class="message"> I really like this admin panel. </span>
                            </a>
@@ -398,43 +398,43 @@
                   </div>
                </div>
                <div class="row" ng-if="!loading">
-                  <div ng-cloak class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" ng-if="shiftDetailsMonth">
                      <div class="info-box blue-bg">
                         <i class="fa fa-users"></i>
-                        <div class="title" ng-cloak>{{shiftDetailsMonth}}
+                        <div class="title" >{{shiftDetailsMonth}}
                            {{shiftDetailsYear}}
                         </div>
-                        <div class="" ng-cloak>Morning | {{countMorningShift || 0}}</div>
-                        <div class="" ng-cloak>Afternoon | {{countAfternoonShift || 0}}</div>
-                        <div class="" ng-cloak>Night | {{countNightShift || 0}}</div>
-                        <div class="" ng-cloak>WeeklyOff | {{countWeeklyOff|| 0}}</div>
+                        <div class="" >Morning | {{countMorningShift || 0}}</div>
+                        <div class="" >Afternoon | {{countAfternoonShift || 0}}</div>
+                        <div class="" >Night | {{countNightShift || 0}}</div>
+                        <div class="" >WeeklyOff | {{countWeeklyOff|| 0}}</div>
                      </div>
                      <!--/.info-box-->
                   </div>
                   <!--/.col-->
-                  <div ng-cloak class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" ng-if="jirasResponse.length >= 0">
                      <div class="info-box brown-bg">
                         <i class="fa fa-pencil-square-o"></i>
                         <div class="title">Past 30 days</div>
-                        <div ng-cloak>Jiras | {{jirasResponse.length}}</div>
-                        <div ng-cloak>Incidents | {{incidentsResponse.length}}</div>
-                        <div ng-cloak>Leaves | {{leavesResponse.length}}</div>
+                        <div >Jiras | {{jirasResponse.length}}</div>
+                        <div >Incidents | {{incidentsResponse.length}}</div>
+                        <div >Leaves | {{leavesResponse.length}}</div>
                      </div>
                      <!--/.info-box-->
                   </div>
                   <!--/.col-->
-                  <div ng-cloak class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                  <div ng-if="wsrResponse.length >= 0" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                      <div class="info-box dark-bg">
                         <i class="fa fa-file-word-o"></i>
                         <div class="title">WSR for {{nextThursday}}</div>
-                        <div class="">{{wsrResponse.length > 0 ? 'has been updated'
+                        <div class="" >{{wsrResponse.length > 0 ? 'has been updated'
                            : 'has not been updated' }}
                         </div>
                      </div>
                      <!--/.info-box-->
                   </div>
                   <!--/.col-->
-                  <div ng-cloak class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                  <div  class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                      <div class="info-box green-bg">
                         <i class="fa fa-sign-in"></i>
                         <div class="title">Last Login</div>
