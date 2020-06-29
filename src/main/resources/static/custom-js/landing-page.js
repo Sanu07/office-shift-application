@@ -222,7 +222,7 @@ var app = angular
              */
             var qJirasReq = $http({
                 url: "/jiras/afterDate/" +
-                    (date.getMonth() + 1) + "-" + today +
+                    date.getMonth() + "-" + today +
                     "-" + year,
                 method: "GET"
             }).then(function(response) {
@@ -276,8 +276,8 @@ var app = angular
                             },
                             vAxis: { 
                             	format: '#',
-                                 viewWindow:{
-                                	 min:0
+                                 viewWindow: {
+                                	 min: 0
                                  }
                                }
                     }
@@ -309,7 +309,7 @@ var app = angular
                             vAxis: { 
                             	format: '#',
                                  viewWindow:{
-                                	 min:0
+                                	 min: 0
                                  }
                             }
                     };

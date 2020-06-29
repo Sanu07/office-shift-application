@@ -194,7 +194,7 @@
                      <ul class="dropdown-menu extended inbox">
                         <div class="notify-arrow notify-arrow-blue"></div>
                         <li>
-                           <p class="blue">You have
+                           <p class="blue" ng-cloak>You have
                               {{incidentsResponse.length+jirasResponse.length+leavesResponse.length}}
                               new messages
                            </p>
@@ -202,7 +202,7 @@
                         <li><a href="/list-all-jiras"> <span class="photo"><img
                            alt="avatar" src="./img/avatar-mini.jpg"></span> <span
                            class="subject"> <span class="from">Jiras</span> <span
-                           class="time">{{jirasResponse.length == 0 ? 'N/A' :
+                           class="time" ng-cloak>{{jirasResponse.length == 0 ? 'N/A' :
                            jirasResponse.length}}</span>
                            </span> <span class="message"> I really like this admin panel. </span>
                            </a>
@@ -397,7 +397,7 @@
                      </ol>
                   </div>
                </div>
-               <div class="row">
+               <div class="row" ng-if="!loading">
                   <div ng-cloak class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                      <div class="info-box blue-bg">
                         <i class="fa fa-users"></i>
@@ -415,10 +415,10 @@
                   <div ng-cloak class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                      <div class="info-box brown-bg">
                         <i class="fa fa-pencil-square-o"></i>
-                        <div class="title">Last month</div>
-                        <div>Jiras | {{jirasResponse.length}}</div>
-                        <div>Incidents | {{incidentsResponse.length}}</div>
-                        <div>Leaves | {{leavesResponse.length}}</div>
+                        <div class="title">Past 30 days</div>
+                        <div ng-cloak>Jiras | {{jirasResponse.length}}</div>
+                        <div ng-cloak>Incidents | {{incidentsResponse.length}}</div>
+                        <div ng-cloak>Leaves | {{leavesResponse.length}}</div>
                      </div>
                      <!--/.info-box-->
                   </div>
@@ -706,7 +706,7 @@
          }
       </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-chart/1.0.0-beta.1/ng-google-chart.min.js" type="text/javascript"></script>
-      <!-- <script
-         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIViJw6I2CW86FLXbZGzQpg29MmUH-LXw&callback=initMap"></script> -->
+      <script
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIViJw6I2CW86FLXbZGzQpg29MmUH-LXw&callback=initMap"></script>
    </body>
 </html>
