@@ -204,7 +204,7 @@ public class GenerateExcel {
 				}
 			}
 		}
-		String fileName = "Shift.xls";
+		String fileName = "Shift.xlsx";
 		FileOutputStream fos = new FileOutputStream(fileName);
 		workbook.write(fos);
 		fos.close();

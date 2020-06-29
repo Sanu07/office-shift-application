@@ -86,4 +86,5 @@ public class IncidentServiceImpl implements IncidentService {
 	public List<IncidentModel> findByIssueDateBefore(Date beforeDate) {
 		return defaultIncidentDao.findByIssueDateBefore(beforeDate);
 	}
+
 }

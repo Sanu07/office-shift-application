@@ -136,7 +136,9 @@ public class UserController {
 	@GetMapping("/getLoggedInUser")
 	public @ResponseBody Object getLoggedInUser(HttpSession session) {
 		UserModel userModel = (UserModel) session.getAttribute("user-profile");
-		userModel.setPassword("**********");
+		if(userModel != null) {
+			userModel.setPassword(null);
+		}
 		return userModel;
 	}
 

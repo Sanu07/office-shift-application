@@ -31,5 +31,5 @@ public interface DefaultIncidentDao extends CrudRepository<IncidentModel, Long> 
 	List<IncidentModel> findByIssueDateAfter(@Param("afterDate") @DateTimeFormat String afterDate);
 
 	List<IncidentModel> findByIssueDateBefore(@Param("beforeDate") @DateTimeFormat Date beforeDate);
-
+	
 }

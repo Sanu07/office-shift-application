@@ -3,8 +3,11 @@ package com.test.shiftapplication.controller;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
@@ -26,6 +29,8 @@ import com.test.shiftapplication.service.JiraService;
 public class JiraController {
 	@Autowired
 	JiraService jiraService;
+	
+	List<JiraModel> jiras = new ArrayList<JiraModel>();
 
 	@PostMapping(value = "/jiras")
 	public @ResponseBody Object save(@RequestBody JiraModel jiraDetails, HttpSession session) {
@@ -45,7 +50,7 @@ public class JiraController {
 
 	@GetMapping("/jiras")
 	public @ResponseBody Object findAll() {
-		return jiraService.findAll();
+		return (List<JiraModel>) jiraService.findAll();	
 	}
 
 	@PutMapping("/jiras")
@@ -62,7 +67,63 @@ public class JiraController {
 	public void deleteJira(@PathVariable("id") long jiraId) {
 		jiraService.deleteJira(jiraId);
 	}
-
+	
+	@GetMapping("/jiras/{afterDate}/past12")
+	public List<Map<String, Integer>> getPastJiras(@PathVariable("afterDate") String afterDate) {
+		return getPastTwelveMonthsJiras((List<JiraModel>)jiraService.findAll());
+	}
+	
+	private List<Map<String, Integer>> getPastTwelveMonthsJiras(List<JiraModel> listOfJiras) {
+		Map<String, Integer> jirasMap = new LinkedHashMap<>();
+		Map<String, Integer> jiraStatusMap = new LinkedHashMap<String, Integer>();
+		List<Map<String, Integer>> list = new ArrayList<Map<String,Integer>>();
+		SimpleDateFormat dbDateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm a");
+		SimpleDateFormat mapKeyFormat = new SimpleDateFormat("MMM-yyyy");
+		jirasMap.put(monthYear(new Date(), -11), 0);
+		jirasMap.put(monthYear(new Date(), -10), 0);
+		jirasMap.put(monthYear(new Date(), -9), 0);
+		jirasMap.put(monthYear(new Date(), -8), 0);
+		jirasMap.put(monthYear(new Date(), -7), 0);
+		jirasMap.put(monthYear(new Date(), -6), 0);
+		jirasMap.put(monthYear(new Date(), -5), 0);
+		jirasMap.put(monthYear(new Date(), -4), 0);
+		jirasMap.put(monthYear(new Date(), -3), 0);
+		jirasMap.put(monthYear(new Date(), -2), 0);
+		jirasMap.put(monthYear(new Date(), -1), 0);
+		jirasMap.put(monthYear(new Date(), -0), 0);
+		jiraStatusMap.put("Open", 0);
+		jiraStatusMap.put("Closed", 0);
+		for (int i = 0; i < listOfJiras.size(); i++) {
+			String mapKey = null;
+			String statusMapKey = null;
+			try {
+				mapKey = mapKeyFormat.format(dbDateFormat.parse(listOfJiras.get(i).getCreatedAt()));
+				statusMapKey = listOfJiras.get(i).getCurrentStatus(); 
+				if (jirasMap.containsKey(mapKey)) {
+					jirasMap.put(mapKey, jirasMap.get(mapKey) + 1);
+				}
+				jiraStatusMap.put(statusMapKey, jiraStatusMap.get(statusMapKey) + 1);
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+		}
+		list.add(jirasMap);
+		list.add(jiraStatusMap);
+		return list;
+	}
+	
+	private String monthYear(Date date, int diff) {
+		if (date == null) {
+			date = new Date();
+		}
+		SimpleDateFormat monthYear = new SimpleDateFormat("MMM-yyyy");
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		cal.add(Calendar.MONTH, diff);
+		Date resultDate = cal.getTime();
+		return monthYear.format(resultDate);
+	}
+	
 	@GetMapping("/jiras/jiraNumber/{jiraNumber}")
 	public JiraModel findByJiraNumber(@PathVariable("jiraNumber") String jiraNumber) {
 		return jiraService.findByJiraNumber(jiraNumber);

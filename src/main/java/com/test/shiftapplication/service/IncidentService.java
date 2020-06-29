@@ -9,7 +9,7 @@ public interface IncidentService {
 	IncidentModel saveIncidentDetails(IncidentModel incidentModel);
 
 	Iterable<IncidentModel> findAll();
-
+	
 	IncidentModel updateIncidentDetails(IncidentModel incidentModel);
 
 	void deleteIncident(long incidentId);

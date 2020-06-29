@@ -54,7 +54,9 @@ public class WSRController {
 		Date receivedDate = null;
 		try {
 			receivedDate = dateFormat.parse(afterDate);
-			listOfWSR = getListOfWSR(receivedDate, ((UserModel) session.getAttribute("user-profile")).getCognizantId());
+			if (session.getAttribute("user-profile") != null) {
+				listOfWSR = getListOfWSR(receivedDate, ((UserModel) session.getAttribute("user-profile")).getCognizantId());
+			}
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}

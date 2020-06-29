@@ -1,5 +1,6 @@
 package com.test.shiftapplication.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,8 +45,11 @@ public class ShiftController {
 	@GetMapping("/shifts/month/{month}/{year}/{userId}")
 	public @ResponseBody Object getAllShiftsByMonthAndUser(@PathVariable("month") String month,
 			@PathVariable("year") String year, @PathVariable("userId") String userId) {
-		List<MonthlyShiftModel> list = (List<MonthlyShiftModel>) shiftService.getAllShiftsByMonthAndUser(month, year,
-				Integer.parseInt(userId));
+		List<MonthlyShiftModel> list = new ArrayList<MonthlyShiftModel>();
+		if (month != null && year != null && userId != null) {
+			list = (List<MonthlyShiftModel>) shiftService.getAllShiftsByMonthAndUser(month, year,
+					Integer.parseInt(userId));
+		}
 		return list;
 	}
 }

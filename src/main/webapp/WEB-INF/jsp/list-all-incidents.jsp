@@ -113,7 +113,7 @@
 									<div class="progress progress-striped">
 										<div class="progress-bar progress-bar-success"
 											role="progressbar" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100" style="width: {{(mCount*100)/totalCount">
+											aria-valuemax="100" style="width: {{(mCount*100)/totalCount}}%">
 											<span class="sr-only">90% Complete (success)</span>
 										</div>
 									</div>
@@ -127,7 +127,7 @@
 									<div class="progress progress-striped">
 										<div class="progress-bar progress-bar-info" role="progressbar"
 											aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
-											style="width: {{(nCount*100)/totalCount">
+											style="width: {{(nCount*100)/totalCount}}%">
 											<span class="sr-only">30% Complete (warning)</span>
 										</div>
 									</div>
@@ -141,7 +141,7 @@
 									<div class="progress progress-striped">
 										<div class="progress-bar progress-bar-warning"
 											role="progressbar" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100" style="width: {{(aCount*100)/totalCount">
+											aria-valuemax="100" style="width: {{(aCount*100)/totalCount}}%">
 											<span class="sr-only">80% Complete</span>
 										</div>
 									</div>
@@ -155,7 +155,7 @@
 									<div class="progress progress-striped">
 										<div class="progress-bar progress-bar-danger"
 											role="progressbar" aria-valuenow="78" aria-valuemin="0"
-											aria-valuemax="100" style="width: {{(wCount*100)/totalCount">
+											aria-valuemax="100" style="width: {{(wCount*100)/totalCount}}%">
 											<span class="sr-only">78% Complete (danger)</span>
 										</div>
 									</div>
@@ -525,7 +525,7 @@
 							<td>{{data.timeSpent}}</td>
 							<td style="width: 500px">{{data.commentsOnResolution}}</td>
 							<td><button class="btn btn-primary" id="edit-jira"
-									ng-click="listJira(this)">{{data.linkedJira}}</button></td>
+									ng-click="listJira(this)" ng-if="data.linkedJira">{{data.linkedJira}}</button></td>
 							<td><button class="btn btn-default" id="edit-jira"
 									ng-click="editIncident(this)">Edit</button></td>
 							<td><button class="btn btn-default" id="delete-jira"

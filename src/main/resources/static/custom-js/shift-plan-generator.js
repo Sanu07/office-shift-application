@@ -131,7 +131,7 @@ app
 								})
 								.then(
 										function(response) {
-											if (response.data.length > 0) {
+											if (/*response.data.length > 0*/ false) {
 												$scope.shiftResponseMessage = "You have already created the shift plan for the month of "
 														+ data.month
 														+ "  "

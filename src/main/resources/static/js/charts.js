@@ -51,13 +51,7 @@ $("#status7").sparkline([3,6,3,9,9,5,4,6,5,6,4,9,7,6,7,8,8,5 ], {
     lineColor: '#436B91',
     fillColor: '#fff'});
 
-$("#todayspark1").sparkline([8,11,9,12,10,9,13,11,12,11,10,12,11,], {
-    type: 'bar',
-    height: '30',
-    barWidth: 5,
-    barColor: '#999'});
-
-$("#todayspark2").sparkline([8,11,9,12,10,9,13,11,12,11,10,12,12,11,10,12,11,], {
+$("#todayspark2").sparkline([22,11,9,12,10,9,13,11,12,11,10,12,12,11,10,12,11,], {
     type: 'bar',
     height: '30',
     barWidth: 5,
