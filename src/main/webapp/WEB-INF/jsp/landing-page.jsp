@@ -397,8 +397,8 @@
                      </ol>
                   </div>
                </div>
-               <div class="row" ng-if="!loading">
-                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" ng-if="shiftDetailsMonth">
+               <div class="row" ng-if="shiftDetailsMonth">
+                  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                      <div class="info-box blue-bg">
                         <i class="fa fa-users"></i>
                         <div class="title" >{{shiftDetailsMonth}}

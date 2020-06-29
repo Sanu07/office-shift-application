@@ -2,7 +2,7 @@ var app = angular
     .module("shiftApp", ["googlechart"])
     .controller(
         'landing-page-controller',
-        function($scope, $http, $q) {
+        function($scope, $http, $q, $timeout) {
             var loggedInUserId = "";
             var promises = [];
             $scope.loading = true;
@@ -368,7 +368,9 @@ var app = angular
                 console.log(response);
             });
             $q.all(promises).then(function () {
-            	$scope.loading = false;
+            	$timeout(function() {
+            		$scope.loading = false;
+            	}, 4000);
             });
         });
 getMonthName = function(v) {
