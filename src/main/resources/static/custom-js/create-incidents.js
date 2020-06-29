@@ -407,9 +407,7 @@ app
 					 */
 					$http(
 							{
-								url : "/incidents/afterDate/"
-										+ (date.getMonth()) + "-" + today + "-"
-										+ year,
+								url : "/incidents/afterDate/5-29-2020",
 								method : "GET"
 							}).then(function(response) {
 						$scope.incidentsResponse = response.data;

@@ -706,7 +706,7 @@
          }
       </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-chart/1.0.0-beta.1/ng-google-chart.min.js" type="text/javascript"></script>
-      <script
-         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIViJw6I2CW86FLXbZGzQpg29MmUH-LXw&callback=initMap"></script>
+      <!-- <script
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIViJw6I2CW86FLXbZGzQpg29MmUH-LXw&callback=initMap"></script> -->
    </body>
 </html>
