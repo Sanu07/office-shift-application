@@ -72,6 +72,9 @@
   			0% { transform: rotate(0deg); }
   			100% { transform: rotate(360deg); }
 		}
+		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+ 			display: none !important;
+		}
       </style>
       <script type="text/javascript">
          function preventBack() {

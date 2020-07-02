@@ -331,7 +331,7 @@
 										<label class="col-sm-2 control-label">Select Month</label>
 										<div class="col-sm-5">
 											<input type="text" id="month" name="month"
-												class="form-control round-input">
+												class="form-control round-input" readonly>
 										</div>
 										<button type="button" class="btn btn-primary"
 											id="shift-plan-generator" ng-click="generateShiftPlan()">Generate
@@ -448,11 +448,10 @@ $(function() {
                 {
                     format: 'yyyy-mm',
                     autoclose: true,
-                    forceParse: false,
-                    Default: true,
-                    pickDate: true,
-                    todayHighlight: true,
-                    clearBtn : true
+                    forceParse: true,
+                    clearBtn : true,
+                    viewMode: "months", 
+                    minViewMode: "months"
                 });
 })
 </script>

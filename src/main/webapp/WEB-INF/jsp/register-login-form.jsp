@@ -146,7 +146,8 @@
 									<div class="form-group">
 										<label class="sr-only" for="form-cognizant-id">Cognizant
 											ID</label> <input type="text" name="form-cognizant-id"
-											placeholder="Cognizant ID..."
+											onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
+											autocomplete="off" pattern="\d+" placeholder="Cognizant ID..."
 											class="form-first-name form-control" id="form-cognizant-id">
 									</div>
 									<div class="form-group">
@@ -157,6 +158,9 @@
 									<div class="form-group">
 										<label class="sr-only" for="phone">Phone</label> <input
 											type="text" name="phone" placeholder="Phone..."
+											onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
+											maxlength="10"
+											min="10"
 											class="form-phone form-control" id="form-phone">
 									</div>
 									<div class="form-group">

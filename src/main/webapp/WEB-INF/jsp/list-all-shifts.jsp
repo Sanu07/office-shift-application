@@ -358,7 +358,7 @@ if it's not present, don't show loader */
 										<label class="col-sm-2 control-label">Select Month</label>
 										<div class="col-sm-5">
 											<input type="text" name="monthAndYear" id="monthAndYear"
-												class="form-control round-input">
+												class="form-control round-input" readonly>
 										</div>
 										<div class="col-sm-5">
 											<input type="button" class="btn btn-default"
@@ -481,13 +481,12 @@ $(function() {
  })
  $('#monthAndYear').datepicker(
                 {
-                    format: 'yyyy-mm',
+                	format: 'yyyy-mm',
                     autoclose: true,
-                    forceParse: false,
-                    Default: true,
-                    pickDate: true,
-                    todayHighlight: true,
-                    clearBtn : true
+                    forceParse: true,
+                    clearBtn : true,
+                    viewMode: "months", 
+                    minViewMode: "months"
                 });
 })
 </script>

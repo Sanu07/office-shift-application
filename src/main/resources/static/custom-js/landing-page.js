@@ -370,7 +370,7 @@ var app = angular
             $q.all(promises).then(function () {
             	$timeout(function() {
             		$scope.loading = false;
-            	}, 4000);
+            	}, 2000);
             });
         });
 getMonthName = function(v) {

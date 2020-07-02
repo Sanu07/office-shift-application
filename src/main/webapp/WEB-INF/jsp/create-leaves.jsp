@@ -389,17 +389,17 @@
 									<div class="form-group">
 										<label class="col-sm-2 control-label">Leave Start Date</label>
 										<div class="col-sm-5">
-											<input type="date" name="leaveStartDate"
-												class="form-control round-input"
-												placeholder="Click to get the Calendar">
+											<input type="text" name="leaveStartDate"
+												class="form-control round-input date-in"
+												placeholder="Click to get the Calendar" readonly>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-sm-2 control-label">Leave End Date</label>
 										<div class="col-sm-5">
-											<input type="date" name="leaveEndDate"
-												class="form-control round-input"
-												placeholder="Click to get the Calendar">
+											<input type="text" name="leaveEndDate"
+												class="form-control round-input date-in"
+												placeholder="Click to get the Calendar" readonly>
 										</div>
 									</div>
 									<div style="margin-left: 20%">
@@ -476,10 +476,10 @@
 	<script src="plugins-js/alertify.min.js"></script>
 	<script type="text/javascript">
 $(function() {
- $('[type=date]').click(function() {
+ $('.date-in').click(function() {
   $(this).datepicker().datepicker( "show" );
  })
- $('[type=date]').datepicker(
+ $('.date-in').datepicker(
                 {
                     format: 'yyyy-mm-dd',
                     autoclose: true,
@@ -487,7 +487,6 @@ $(function() {
                     Default: true,
                     pickDate: true,
                     todayHighlight: true,
-
                 });
 })
 </script>
