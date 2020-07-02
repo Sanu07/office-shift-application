@@ -74,7 +74,7 @@ if it's not present, don't show loader */
     <![endif]-->
 </head>
 
-<body ng-app="shiftApp" ng-controller="list-shift-plan-controller">
+<body ng-app="shiftApp" ng-controller="list-shift-plan-controller" ng-cloak>
 	<!-- container section start -->
 	<section id="container" class="">
 		<!--header start-->

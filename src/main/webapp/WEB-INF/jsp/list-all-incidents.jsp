@@ -68,7 +68,7 @@
 </head>
 
 <body ng-app="shiftApp" ng-controller="list-incident-controller"
-	ng-init="getAllIncidents()">
+	ng-init="getAllIncidents()" ng-cloak>
 
 	<!-- Paste this code after body tag -->
 	<div class="se-pre-con"></div>

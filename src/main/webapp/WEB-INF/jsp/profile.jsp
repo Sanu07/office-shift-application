@@ -60,7 +60,7 @@
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
 </head>
-<body ng-app="shiftApp" ng-controller="user-profile-controller">
+<body ng-app="shiftApp" ng-controller="user-profile-controller" ng-cloak>
 	<!-- container section start -->
 	<section id="container" class="">
 		<!--header start-->

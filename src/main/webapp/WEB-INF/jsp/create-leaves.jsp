@@ -48,7 +48,7 @@
     <![endif]-->
 
 </head>
-<body ng-app="shiftApp" ng-controller="create-leave-controller">
+<body ng-app="shiftApp" ng-controller="create-leave-controller" ng-cloak>
 
 	<!-- container section start -->
 	<section id="container" class="">

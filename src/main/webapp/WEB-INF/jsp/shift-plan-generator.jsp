@@ -48,7 +48,7 @@
     <![endif]-->
 </head>
 
-<body ng-app="shiftApp" ng-controller="shift-plan-controller">
+<body ng-app="shiftApp" ng-controller="shift-plan-controller" ng-cloak>
 	<!-- container section start -->
 	<section id="container" class="">
 		<!--header start-->

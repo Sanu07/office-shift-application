@@ -171,7 +171,7 @@ var app = angular
                             {id: "w", label: "Week-Off", type: "number"}
                         ], "rows": $scope.rows };
                         $scope.myChartObject.options = {
-                                'title': 'Shifts',
+                                'title': 'Shifts For ' + month,
                                 'height': '100%',
                                 'width': '100%',
                                 'isStacked': true,
@@ -303,7 +303,7 @@ var app = angular
                     	}
                     ] };
                     $scope.jiraIncStatusChart.options = {
-                            'title': '12 Months Status',
+                            'title': 'Last 12 Months Status',
                             'height': '100%',
                             'width': '100%',
                             orientation: 'horizontal',

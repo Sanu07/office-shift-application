@@ -70,7 +70,7 @@
 </head>
 
 <body ng-app="shiftApp" ng-controller="list-leaves-controller"
-	ng-init="getMyLeaves()">
+	ng-init="getMyLeaves()" ng-cloak>
 
 	<!-- container section start -->
 	<section id="container" class="">

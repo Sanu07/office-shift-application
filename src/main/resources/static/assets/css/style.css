@@ -177,12 +177,14 @@ img { max-width: 100%; }
 
 .middle-border {
 	min-height: 300px;
-	margin-top: 170px;
+	margin-top: 70px;
 	border-right: 1px solid #fff;
 	border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+ 			display: none !important;
+}
 /***** Footer *****/
 
 footer {

@@ -69,7 +69,7 @@
 </head>
 
 <body ng-app="shiftApp" ng-controller="list-jira-controller"
-	ng-init="getAllJiras()">
+	ng-init="getAllJiras()" ng-cloak>
 	<!-- Paste this code after body tag -->
 	<div class="se-pre-con"></div>
 	<!-- Ends -->

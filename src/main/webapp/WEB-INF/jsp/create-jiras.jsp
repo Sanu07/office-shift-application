@@ -49,7 +49,7 @@
 
 </head>
 <body class="row" ng-app="shiftApp"
-	ng-controller="create-jira-controller">
+	ng-controller="create-jira-controller" ng-cloak>
 
 	<!-- container section start -->
 	<section id="container" class="">

@@ -42,10 +42,15 @@
       <script src="js/respond.min.js"></script>
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
+    <style type="text/css">
+    	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+ 			display: none !important;
+		}
+    </style>
 </head>
 
 <body ng-app="shiftApp" ng-controller="list-wsr-controller"
-	ng-init="getAllWSRDetails()">
+	ng-init="getAllWSRDetails()" ng-cloak>
 	<!-- container section start -->
 	<section id="container" class="">
 		<!--header start-->

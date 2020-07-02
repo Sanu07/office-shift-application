@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-signin-client_id"
 	content="346004683826-ok14os0738dm39g348lnqvjncn7mei3d.apps.googleusercontent.com">
-<title>Bootstrap Login &amp; Register Templates</title>
+<title>Shift App &amp; Incidents Tracker</title>
 
 <!-- CSS -->
 <link rel="stylesheet"
@@ -53,14 +53,11 @@
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2 text">
 						<h1>
-							<strong>Site</strong> Login &amp; Register Forms
+							<strong>Internal Project</strong> Login &amp; Register 
 						</h1>
 						<div class="description">
 							<p>
-								This is a free responsive <strong>"login and register
-									forms"</strong> template made with Bootstrap. Download it on <a
-									href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a>,
-								customize and use it as you like!
+								<strong>Click</strong> <a href="https://github.com/Sanu07/" target="_blank"><strong>to see my GitHub Link</strong></a>,
 							</p>
 						</div>
 					</div>
@@ -72,8 +69,8 @@
 						<div class="form-box">
 							<div class="form-top">
 								<div class="form-top-left">
-									<h3>Login to our site</h3>
-									<p>Enter username and password to log on:</p>
+									<h3>Login</h3>
+									<p>Enter user email and password to log on:</p>
 								</div>
 								<div class="form-top-right">
 									<i class="fa fa-lock"></i>
@@ -140,7 +137,7 @@
 									<div class="form-group">
 										<label class="sr-only" for="form-first-name">First
 											name</label> <input type="text" name="form-first-name"
-											placeholder="First name..."
+											placeholder="First name..." autocomplete="off"
 											class="form-first-name form-control" id="form-first-name">
 									</div>
 									<div class="form-group">
@@ -152,26 +149,26 @@
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="form-email">Email</label> <input
-											type="email" name="form-email" placeholder="Email..."
+											type="email" autocomplete="off" name="form-email" placeholder="Email..."
 											class="form-email form-control" id="form-email-reg">
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="phone">Phone</label> <input
 											type="text" name="phone" placeholder="Phone..."
 											onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
-											maxlength="10"
+											maxlength="10" autocomplete="off"
 											min="10"
 											class="form-phone form-control" id="form-phone">
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="password">Password</label> <input
-											type="password" name="password" placeholder="Password..."
+											type="password" name="password" autocomplete="off" placeholder="Password..."
 											class="form-password form-control" id="form-password-reg">
 									</div>
 									<div class="form-group">
 										<label class="sr-only" for="conpassword">Confirm
 											Password</label> <input type="password" name="conpassword"
-											placeholder="Confirm Password..."
+											placeholder="Confirm Password..." autocomplete="off"
 											class="form-conpassword form-control"
 											id="form-conpassword-reg">
 									</div>
@@ -195,13 +192,13 @@
 		<div class="container">
 			<div class="row">
 
-				<div class="col-sm-8 col-sm-offset-2">
+				<!-- <div class="col-sm-8 col-sm-offset-2">
 					<div class="footer-border"></div>
 					<p>
-						Made by Anli Zaimi at <a href="http://azmind.com" target="_blank"><strong>AZMIND</strong></a>
-						having a lot of fun. <i class="fa fa-smile-o"></i>
+						<a href="http://azmind.com" target="_blank"><strong></strong></a>
+						<i class="fa fa-smile-o"></i>
 					</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</footer>

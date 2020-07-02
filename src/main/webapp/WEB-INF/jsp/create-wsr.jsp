@@ -48,7 +48,7 @@
     <![endif]-->
 
 </head>
-<body ng-app="shiftApp" ng-controller="create-wsr-controller">
+<body ng-app="shiftApp" ng-controller="create-wsr-controller" ng-cloak>
 
 	<!-- container section start -->
 	<section id="container" class="">
@@ -365,7 +365,7 @@
 																	<div class="controls ">
 																		<input type="text" name="listOfJiras"
 																			id="id_stock_1_product"
-																			class="textinput form-control" />
+																			class="textinput form-control" required/>
 																	</div>
 																</div>
 															</div>

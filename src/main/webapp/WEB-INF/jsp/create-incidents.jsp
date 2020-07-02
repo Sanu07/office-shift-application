@@ -46,9 +46,14 @@
       <script src="js/respond.min.js"></script>
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
+    <style type="text/css">
+    	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+ 			display: none !important;
+		}
+    </style>
 
 </head>
-<body ng-app="shiftApp" ng-controller="create-incident-controller">
+<body ng-app="shiftApp" ng-controller="create-incident-controller" ng-cloak>
 
 	<!-- container section start -->
 	<section id="container" class="">
